@@ -1,4 +1,8 @@
 @012226' Final project save <br>
+<br>
+JUST A DEMO SAMPLE...  DEMO SAMPLE...  DEMO... <br><br>
+
+ANY LINKS ARE OPEN, NON PRIVATE SCRIPTS USED FOR LEARNING. <br>
 Working links to all project apps, +6 subapps.  <br>
 Lots of working code. API routing using django,  <br>
 New tree diagram method used. <br>
