@@ -1,0 +1,42 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="asgiref" />
+          <option value="certifi" />
+          <option value="cffi" />
+          <option value="charset-normalizer" />
+          <option value="cryptography" />
+          <option value="defusedxml" />
+          <option value="django" />
+          <option value="djangorestframework" />
+          <option value="djangorestframework-simplejwt" />
+          <option value="djoser" />
+          <option value="idna" />
+          <option value="mysqlclient" />
+          <option value="oauthlib" />
+          <option value="pycparser" />
+          <option value="pyjwt" />
+          <option value="python3-openid" />
+          <option value="requests" />
+          <option value="requests-oauthlib" />
+          <option value="social-auth-app-django" />
+          <option value="social-auth-core" />
+          <option value="sqlparse" />
+          <option value="tzdata" />
+          <option value="urllib3" />
+          <option value="pillow" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStubPackagesAdvertiser" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="djangorestframework" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

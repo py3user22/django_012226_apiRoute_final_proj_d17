@@ -1,0 +1,146 @@
+<!doctype html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'LittleLemonAPI/style.css' %}">
+
+    <title>012126 manager portal demo</title>
+</head>
+<body>
+    <h2> <b><i> Manager portal demo @012126'  </i></b>   </h2>
+    <h3>
+                    @api_view([ 'GET', 'POST' ])  <br>
+            @permission_classes([ <b><u>IsAdminUser</u></b> ])     <br> <br>
+
+    </h3>
+
+    <div class="manager"  id="topg">
+        <h2> MENU ITEMS  </h2>
+        <p>
+            <i>,________, # [ MENU ITEMS  ]</i> <br>
+            |________| <a href="{% url 'menu:menu-items' %}"> >> MENU <i>GLOBAL VIEW</i> << </a> <br> <br>
+
+            ,______________________________________________________, <br>
+            |______________________________________________________|  <br> <br>
+
+            <i>,________, # [ MENU ITEMS + SINGLE VIEW  ]</i> <br>
+            |________| <a href="{% url 'menu:menu-items' %}"> >> MENU + SINGLE VIEW  <i>GLOBAL VIEW</i> << </a> <br> <br>
+
+        </p>
+
+        <p>
+            <i>,________, # [ <u>HOMEPAGE</u> ]</i> <br>
+            |________| <a href="/"> HOMEPAGE LINK </a><br><br>
+
+
+            <i>,________, # [ <u> LINK TO BOTTOM PAGE</u> ]</i> <br>
+            |________| <a href="#pgbotm"> Link to page bottom </a>
+
+        </p>
+    </div>
+
+    <div class="manager" >
+
+        <h2> SECTION: MANAGER  </h2>
+        <h3> <b><i><u>Requires:</u></i></b> Token login + IsAdmin     </h3>
+
+        <p>
+
+            ___MENU -- <i>views.py</i> <br>
+            ,________________________________________,__________, <br>
+            | from rest_framework.<u>decorators</u> import <i>api_view, permission_classes</i> <br>
+            |________________________________________|__________| <br>
+
+            ,___________________________________________,__________, <br>
+            | from rest_framework.<u>permissions</u> import <i>IsAuthenticated, IsAdminUser</i> <br>
+            |___________________________________________|__________| <br><br>
+
+            ,____#demo122 --<i>decorators</i> _____________________ <br>
+            |___ <br>
+            | @api_view([ 'GET', 'POST' ])  <br>
+            | @permission_classes([ <b><u>IsAdminUser, IsAuthenticated</u></b> ])     <br>|<br>|<br>
+            |_____________________________________________________ <br><br>
+
+
+            ,___________________________________________,__________, <br>
+            |___________________________________________|__________| <br>
+
+
+            <b><u>LINKS:</u></b> <br>
+            <i>,__, # [JSON LIST of menu-items]</i> <br>
+            |_________| api_view( ['GET', 'POST' ] ) <br>
+            |_________| <a href="{% url 'menu:menu-items' %}"> <i> >> MENU  --INVENTORY LIST HERE  << </i>    </a> <br> <br>
+
+            <i>,__, # [ Single-view of menu-items ]</i> <br>
+            |_________| api_view( ['GET', 'PATCH' ] ) <br>
+            |_________|  <br>
+            |_________| @012126 -- NEEDS EDITS TO PATCH <br>
+            |_________| <a href="{% url 'menu:menu-items' %}"> <i> >> MENU --ADD DIGIT FOR SINGLE VIEWS   << </i> </a> <br> <br>
+
+        </p>
+    </div>
+
+    <div class="manager" >
+        <h2> DELIVERY / ORDERS   </h2>
+        <h3> <b><i><u>Requires:</u></i></b> Token login + IsAdmin     </h3>
+        <p>
+            <i>,__, # [JSON LIST of DELIVERY ORDERS ]</i> <br>
+            |_________| api_view( ['GET', 'POST' ] ) <br>
+            |_________| <a href="{% url 'delivery:delivery-list-view' %}"> <i> >> DELIVERY ORDERS --LIST HERE  << </i>    </a> <br> <br>
+
+            <i>,__, # [ Single-view of menu-items ]</i> <br>
+            |_________| api_view( ['GET', 'PATCH' ] ) <br>
+            |_________|  <br>
+            |_________| @012226 -- UPDATES USING PATCH <br>
+            |_________| <a href="{% url 'delivery:delivery-list-view' %}"> <i> >> DELIVERY ORDERS --ADD DIGIT FOR SINGLE VIEWS   << </i> </a> <br> <br>
+
+        </p>
+    </div>
+
+    <div class="manager" >
+        <h2> CART / CART VIEW   </h2>
+        <h3> <b><i><u>Requires:</u></i></b> Token login + IsAdmin     </h3>
+        <p>
+            <i>,__, # [JSON LIST of CART VIEW ]</i> <br>
+            |_________| api_view( ['GET', 'POST' ] ) <br>
+            |_________| IN-PROGRESS <br>
+            |_________| <a href="{% url 'cart:add_2cart' %}"> <i> >> CART --LIST HERE  << </i>    </a> <br> <br>
+
+            <i>,__, # [ Single-view of CART ]</i> <br>
+            |_________| api_view( ['GET', 'PATCH' ] ) <br>
+            |_________|  <br>
+            |_________| IN-PROGRESS <br>
+            |_________| @012226 -- NEEDS EDITS <br>
+            |_________| <a href="{% url 'cart:add_2cart' %}"> <i> >> CART --SINGLE ORDERS --ADD DIGIT FOR SINGLE VIEWS   << </i> </a> <br> <br>
+
+        </p>
+    </div>
+
+    <div class="manager" >
+        <h2> DJANGO ADMIN  </h2>
+        <p>
+            <i>,________, # [ Django admin. page ]</i> <br>
+            |________| <a href="{% url 'admin:index' %}"> >> DJANGO ADMIN PAGE << </a> <br> <br>
+
+            ,______________________________________________________, <br>
+            |______________________________________________________|  <br> <br>
+        </p>
+
+        <p id="pgbotm">
+            <i>,________, # [ <u>HOMEPAGE</u> ]</i> <br>
+            |________| <a href="/"> HOMEPAGE LINK </a> <br><br>
+
+            <i>,________, # [ <u>TOP OF PAGE</u> ]</i> <br>
+            |________| <a href="#topg"> TOP PAGE LINK </a>
+
+        </p>
+    </div>
+
+</body>
+</html>

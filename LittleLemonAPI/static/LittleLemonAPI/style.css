@@ -1,0 +1,15 @@
+.menuitems {
+    padding: 8px; margin-left: 9px; color: dodgerblue;
+    border: 2px darkmagenta dashed;
+}
+
+.manager {
+    padding: 8px; margin-left: 9px; color: crimson;
+    border: 2px darkorchid dashed;
+}
+
+
+
+a:hover { color: blueviolet; border: chartreuse solid 1px; border-radius: 0 15px 15px 0;
+    background-color: aqua; padding: 5px;
+}

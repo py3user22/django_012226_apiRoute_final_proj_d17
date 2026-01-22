@@ -1,0 +1,124 @@
+<!doctype html>
+{% load static %}
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{% static 'LittleLemonAPI/style.css' %}">
+
+    <title>116 Homepage demo</title>
+</head>
+<body>
+    <h1> <u><i> Final project -- API routes demo 011926' </i></u>  </h1>
+    <h2> <b>SECTION: MENU ITEMS </b>  <a href="menu-items/"> >> Menu-items list <<  </a></h2>
+    <div class="menuitems" >
+
+
+        <p>
+
+            <br>,______________________________,  # python manage.py createsuperuser <br>
+            |______________________________|  # create some example menu-items  <br> <br>
+            <b><u>LINKS:</u></b> <br>
+            <i>,________, # [JSON LIST of menu-items]</i> <br>
+            |________| <a href="menu-items/"> /menu-item/  </a> <br> <br>
+
+            <i>,________, # [ Single-view of menu-items ]</i> <br>
+            |________| <a href="menu-items/"> /menu-item/< int:pk >  </a> <br> <br>
+            ,______________________________________________________, <br>
+            |______________________________________________________|  <br>
+        </p>
+    </div>
+
+
+    <h2>  <b>SECTION: MANAGER</b>  <a href="admin/"> >> Admin. homepage << </a></h2>
+    <h2> |_________ <a href="manage-one/"> MANAGER HOMEPAGE @012126'  </a>    </h2>
+    <div class="manager" >
+
+
+        <p>
+
+            <br>,______________________________,  # requires token-based authentication <br>
+            |______________________________|  # api_view() decorators <br> <br>
+            <b><u>LINKS:</u></b> <br>
+            <i>,________, # [JSON LIST of menu-items]</i> <br>
+            |________| api_view( ['GET', 'POST' ] ) <br>
+            |________| <a href="menu-items-manager/"> /menu-item-manager/  </a> <br> <br>
+
+            <i>,________, # [ Single-view of menu-items ]</i> <br>
+            |________| api_view( ['GET', 'PATCH' ] ) <br>
+            |________| <a href="menu-items-manager/"> /menu-item-manager/< int:pk >  </a> <br> <br>
+
+
+            ,______________________________________________________, <br>
+            |______________________________________________________|  <br>
+        </p>
+    </div>
+
+
+    <h2>  <b>SECTION: DELIVERY CREW</b>  <a href="delivery/"> >> Delivery Crew Scheduling << </a></h2>
+    <div class="manager" >
+
+
+        <p>
+
+            <br>,______________________________,  # requires token-based authentication <br>
+            |______________________________|  # api_view() decorators <br> <br>
+            <b><u>LINKS:</u></b> <br>
+            <i>,________, # [ View the scheduled deliveries ]</i> <br>
+            |________| api_view( 'GET' ) <br>
+            |________| <a href="delivery/"> Delivery --List </a> <br> <br>
+
+            <i>,________, # [ Single-view of specific delivery ]</i> <br>
+            |________| api_view( ['GET', 'PATCH' ] ) <br>
+            |________| <a href="delivery/"> Delivery  --List single view  </a> <br> <br>
+
+
+
+            ,______________________________________________________, <br>
+            |______________________________________________________|  <br>
+        </p>
+    </div>
+
+
+    <h2>  <b>SECTION: CUSTOMER</b>  <a href="menu-items/"> >> Customer view of Menu Item << </a></h2>
+    <div class="menuitems" >
+
+
+        <p>
+
+            <br>,______________________________,  # requires token-based authentication <br>
+            |______________________________|  # api_view() decorators <br> <br>
+            <b><u>LINKS:</u></b> <br>
+            <i>,________, # [ CUSTOMER View MENU -- READ ONLY ]</i> <br>
+            |________| api_view( 'GET' ) <br>
+            |________| <a href="customer-menu/"> Menu Items --List </a> <br> <br>
+
+
+            <i>,________, # [ CUSTOMER -- SINGLE MENU ITEM -- READ ONLY ]</i> <br>
+            |________| api_view( 'GET' ) <br>
+            |________| <a href="customer-menu/"> Single Items --Display, -- use /< int:pk>/  </a> <br> <br>
+
+
+
+            <i>,________, # [ Single-view of specific delivery ]</i> <br>
+            |________| api_view( ['GET' ] ) <br>
+            |________| <a href="/"> Customer ORDERS -- Single view --READ ONLY  </a> <br> <br>
+
+
+            <i>,________, # [ Categories view  ]</i> <br>
+            |________| api_view( ['GET' ] ) <br>
+            |________| <a href="category-view/"> >> Category views List (READ only)  </a> <br> <br>
+
+
+
+            ,______________________________________________________, <br>
+            |______________________________________________________|  <br>
+        </p>
+    </div>
+
+</body>
+</html>
