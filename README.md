@@ -8,3 +8,8 @@ Using the .. method for calling my external scripts <br>
  to view some api views.   <br>
  Intermediate to advanced topics including, sorting, pagination, ordering, and more <br>
  topics such as permission adding for security locking the pages. 
+ <br> <br>
+ Steps to make work: <br>
+
+
+ 
